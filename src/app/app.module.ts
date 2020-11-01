@@ -8,6 +8,9 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { AddItemformComponent } from './add-itemform/add-itemform.component';
 import { BudgetItemlistComponent } from './budget-itemlist/budget-itemlist.component';
 import { BudgetItemCardComponent } from './budget-itemlist/budget-item-card/budget-item-card.component';
+import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -16,14 +19,18 @@ import { BudgetItemCardComponent } from './budget-itemlist/budget-item-card/budg
     AddItemformComponent,
     BudgetItemlistComponent,
     BudgetItemCardComponent,
+    EditItemModalComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
+  entryComponents:[EditItemModalComponent], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
